@@ -1,1 +1,1 @@
-# Natural Disaster Image Classification using EfficientNetB1
+# Natural Disaster Image Classification using CNN (EfficientNetB1)
