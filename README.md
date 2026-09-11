@@ -6,6 +6,10 @@ This group project focuses on developing and evaluating a deep learning model fo
 ## Table of Content
 - [Dataset Used](#dataset-used)
 - [Methodology](#methodology)
+- [Model Architecture](#model-architecture)
+- [Results](#results)
+- [Technologies](#technologies)
+- [Team](#team)
 
 ## Dataset Used
 The dataset was sourced from the [Disaster Images Dataset](https://www.kaggle.com/datasets/varpit94/disaster-images-dataset) on Kaggle.
