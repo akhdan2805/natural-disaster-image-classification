@@ -24,24 +24,21 @@ A total of **1,946 images** were used across these four categories for model tra
 ## Methodology
 The project consists of five main stages:
 
-**1. Configuration**
+### **1. Configuration**
 - **Dataset Path:** Google Drive
 - **Classes:** Earthquake, Land_Slide, Urban_Fire, Water_Disaster
 - **Image Size:** 224 × 224 pixels
 - **Batch Size:** 32
 - **Random Seed:** 42
 
-**1. Data Preprocessing**  
-Images were cleaned, resized, normalized, and organized into four disaster categories: Earthquake, Urban Fire, Land Slide, and Water Disaster.
+### **2. Exploratory Data Analysis & Data Preprocessing**  
+The dataset was cleaned by removing duplicate, corrupted, empty, and irrelevant images identified through the exploratory analysis. In addition, 19 irrelevant images were manually removed based on the RGB outlier analysis to improve data quality. The images were then prepared for standardized processing at a size of **224 × 224 pixels** while preserving their original aspect ratio through cropping.
 
-**2. Data Augmentation**  
-Image augmentation was applied to the training data to increase image diversity and improve model generalization.
+### **3. Data Loading**
+The cleaned images were loaded into Google Colab and converted into a TensorFlow dataset using an image size of **224 × 224 pixels** and a **batch size of 32**. To preserve the original proportions of the images, cropping was applied during the loading process using aspect ratio preservation. This ensured that the images were standardized without introducing significant visual distortion.
 
-**3. Model Development**  
-A CNN-based **EfficientNetB1** architecture was used to perform multi-class image classification.
+### **4. Data Splitting**
+The dataset was divided into three subsets: **70% for training, 15% for validation, and 15% for testing**. The training set was used to learn visual patterns from the disaster images, while the validation set was used to monitor model performance during training. The remaining test set was reserved for final evaluation using images that had not been seen by the model during training. The training data was also reshuffled at each epoch to prevent the model from learning patterns based on the original sample order.
 
-**4. Model Training**  
-The model was trained on the prepared dataset while monitoring training and validation performance.
-
-**5. Model Evaluation**  
-Model performance was evaluated using accuracy, precision, recall, F1-score, and confusion matrix.
+### **5. Data Augmentation**
+The training images were normalized by rescaling pixel values from **0–255 to 0–1**. To increase data variability and improve model generalization, augmentation techniques were applied exclusively to the training set, including **horizontal flipping, rotation up to 10%, and zooming up to 10%**. No augmentation was applied to the validation and test sets to preserve the integrity of the evaluation data. TensorFlow `AUTOTUNE` and prefetching were also used to improve the efficiency of the data pipeline.
