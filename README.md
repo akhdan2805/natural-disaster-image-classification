@@ -1,5 +1,7 @@
 # 🌪️ Natural Disaster Image Classification using CNN (EfficientNetB1)
 
+Here is the code with the output result: https://drive.google.com/file/d/18IOQG9QRmknQW0AaDxYv67M9zQ1v_DeM/view?usp=sharing
+
 ## Objective
 This group project focuses on developing and evaluating a deep learning model for natural disaster image classification. Using EfficientNetB1, a CNN-based architecture, the project covers data preprocessing, model training, and evaluation using classification metrics to assess model performance.
 
