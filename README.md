@@ -105,4 +105,4 @@ The EfficientNetB1 model with Class Weight provided the most stable and balanced
 
 
 ## Team
-This project was developed collaboratively by **Muhammad Akhdan Athallah** and **Muhammad Hylmi Razzan** as part of the **Deep Learning** course at Bina Nusantara University.
+This project was developed collaboratively by **Muhammad Akhdan Athallah** and **Muhammad Hylmi Razzan**.
